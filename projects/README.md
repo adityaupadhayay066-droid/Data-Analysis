@@ -1,0 +1,42 @@
+# ADANIPORTS Stock Data Analysis 📈
+
+I built this small project to practice working with real stock market data using Python.
+
+The dataset contains historical data of ADANIPORTS, including Date, Open, High, Low, Close, and Volume. My main goal was to clean the data properly and visualize important patterns over time.
+
+## What I Did
+
+- Cleaned the dataset (removed null values, checked duplicates)
+- Converted the Date column into proper datetime format
+- Sorted the data by date
+- Created multiple visualizations:
+  - Closing price over time
+  - Trading volume over time
+  - High vs Low comparison
+  - 20-day and 50-day Moving Averages
+
+All graphs are saved as PNG files.
+
+## Why I Made This
+
+I wanted to understand how stock trends look visually and how moving averages help in identifying trends. This project helped me improve my understanding of:
+
+- Time series data
+- Data cleaning with Pandas
+- Data visualization using Matplotlib
+- Rolling averages
+
+## Tools Used
+
+- Python
+- Pandas
+- Matplotlib
+
+## What I Learned
+
+- Importance of cleaning data before analysis
+- How to work with datetime in Pandas
+- How moving averages smooth out price fluctuations
+- How visualization makes patterns easier to understand
+
+This is a beginner-level project, but it helped me strengthen my basics in data analysis.

@@ -1,0 +1,28 @@
+Colour pallete in Visualization 
+Mean set of colour which make visulization look better and look good 
+
+types of pallete in Seaborn 
+
+1️⃣ viridis
+A modern color pallete
+color goes from purple,blue,green,yellow
+It is best for scientific plots
+
+2️⃣ coolwarm
+color pallete goes to blue,white,red
+Used in low vs high values 
+
+3️⃣ Set2
+soft color pallete
+Good for Categorical data 
+
+4️⃣ Set3
+it is very bright colors
+Useful when there are many categories
+
+5️⃣ pastel 
+Light and soft colors
+Looks clean and minimal
+
+6️⃣ cubehelix
+use for dark professional visualizations.
