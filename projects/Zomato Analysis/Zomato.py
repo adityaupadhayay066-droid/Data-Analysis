@@ -8,6 +8,7 @@ print(df.columns)
 print(df.head(),"\n")
 print(df.tail ())
 
+# Removing extra values 
 def Remove(value):
     value = str(value).split("/")[0]
     return float(value)
