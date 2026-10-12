@@ -27,4 +27,3 @@ sns.scatterplot(x="rate", y="votes", data=df)
 plt.title("Rate vs Votes", fontweight="bold", size=16)
 plt.savefig("Restraunt_Rating.png")
 plt.show()
-
