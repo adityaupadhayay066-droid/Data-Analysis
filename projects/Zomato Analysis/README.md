@@ -1,111 +1,93 @@
-# Zomato Restaurant Data Analysis
+# 🍽️ Zomato Restaurant Analytics & Executive Intelligence Dashboard
 
-## Overview
+An end-to-end data analysis and interactive business intelligence dashboard for exploring restaurant dynamics, pricing patterns, online delivery lift, and consumer engagement across Bangalore's dining ecosystem. Built with **Python**, **Streamlit**, **Plotly**, **Pandas**, and **Seaborn**.
 
-Zomato Restaurant Data Analysis is a Python-based data analysis project that explores restaurant categories and customer ratings using data visualization techniques.
+---
 
-The project uses Pandas to process the dataset and Matplotlib and Seaborn to visualize restaurant distribution and the relationship between ratings and customer votes.
+## 🌟 Dashboard Highlights
 
-## Features
+The project features a **human-centered, natural dashboard design** adhering to modern BI design principles:
 
-* Load and inspect restaurant data using Pandas.
-* Clean restaurant ratings by extracting numeric values from rating strings.
-* Analyze the distribution of restaurant types.
-* Visualize the relationship between restaurant ratings and customer votes.
-* Generate charts using Seaborn and Matplotlib.
+* **Executive KPI Cards**: Real-time metrics for active restaurants, average ratings (with 3.5★ benchmark deltas), total customer votes, average ticket size (cost for two), and digital service adoption.
+* **Natural Intelligence & Strategic Observations**: An automated executive commentary panel that dynamically updates insights based on active filter selections.
+* **5 Interactive Analytical Views**:
+  1. **📊 Executive Overview**: Restaurant type donut chart, rating health distribution with KDE curve, and digital convenience adoption matrix.
+  2. **🎯 Rating & Votes Dynamics**: Interactive bubble scatter plot with OLS trendline, top 10 most voted powerhouses, and box plots verifying rating lift from online ordering.
+  3. **💰 Pricing & Strategic Value Matrix**: 4-Quadrant Strategic Value Matrix (*Best Value Champions*, *Premium Gourmet*, *Budget Casual*, *Overpriced / Review Needed*), spend-by-format breakdown, and Top 5 Value-for-Money spots.
+  4. **🔍 Restaurant Finder & Head-to-Head Faceoff**: Direct side-by-side comparison scorecard with normalized multi-dimensional spider/radar chart and interactive restaurant catalog cards.
+  5. **📑 Data Explorer & Export**: Sortable data table with summary statistics and one-click filtered CSV export.
+* **Sidebar Controls & Reactive Engine**: Quick text search, restaurant format multi-select, online ordering filter, table booking filter, dual-handle sliders for cost and rating, minimum votes threshold, and one-click filter reset.
 
-## Technologies Used
+---
 
-* **Python** — Core programming language
-* **Pandas** — Dataset loading and data manipulation
-* **NumPy** — Numerical computing library
-* **Matplotlib** — Data visualization
-* **Seaborn** — Statistical data visualization
+## 💡 Key Business Insights Discovered
 
-## Project Structure
+* **Digital Ordering Advantage**: Restaurants offering online delivery achieve an average rating of **3.86★** vs. **3.49★** for offline-only venues (+0.37★ boost) and capture **7.4x more customer reviews and votes** (559 vs. 75 votes on average).
+* **Table Booking Premium**: Outlets offering table reservations command a **+Rs. 291 higher average ticket size** (Rs. 694 vs. Rs. 403 for two) and score **4.19★** average customer satisfaction vs. **3.60★** for non-booking spots.
+* **Market Composition**: **Dining** accounts for 74.3% of listings, followed by **Cafes** (15.5%), **Buffet** (4.7%), and **Delivery/Other** (5.4%).
+
+---
+
+## 📁 Project Structure
 
 ```text
 Zomato-Data-Analysis/
 │
-├── Zomato data .csv
-├── zomato_analysis.py
-├── Restraunt_Rating.png
-└── README.md
+├── Zomato data .csv            # Source dataset (148 restaurant records)
+├── app.py                      # Main Streamlit interactive BI dashboard
+├── Zomato.py                   # Python EDA script & CLI analysis runner
+├── Restaurant_Types.png        # Saved category distribution visualization
+├── Rate_vs_Votes.png           # Saved rating vs customer engagement chart
+├── Restraunt_Rating.png        # Backward-compatible chart export
+└── README.md                   # Complete documentation
 ```
 
-The Python script generates the chart image files when executed. The same filename is currently used for both charts, so the second chart overwrites the first one.
+---
 
-## Installation
+## 🚀 Quickstart & Installation
 
-### 1. Clone the repository
+### 1. Prerequisites
+
+Ensure Python 3.10+ is installed on your system.
+
+### 2. Install Dependencies
 
 ```bash
-git clone <your-repository-url>
-cd Zomato-Data-Analysis
+pip install streamlit plotly pandas numpy seaborn matplotlib statsmodels
 ```
 
-Replace `<your-repository-url>` with your actual GitHub repository URL.
+### 3. Launch the Interactive Dashboard
 
-### 2. Install dependencies
+Run the Streamlit application in your terminal:
 
 ```bash
-pip install numpy pandas matplotlib seaborn
+streamlit run app.py
 ```
 
-### 3. Add the dataset
+The dashboard will open automatically in your browser at `http://localhost:8501`.
 
-Place `Zomato data .csv` in the same directory as the Python script.
+*(Alternatively, you can also launch it via: `streamlit run Zomato.py`)*
 
-### 4. Run the project
+### 4. Run the Static EDA Script
+
+If you only want to generate static charts and view terminal summaries:
 
 ```bash
-python zomato_analysis.py
+python Zomato.py
 ```
 
-## Data Visualizations
+---
 
-### 1. Restaurant Type Distribution
+## 🎨 Design System & Palette
 
-Uses a count plot to show how restaurant records are distributed across different restaurant types.
+* **Primary Brand Accent**: Zomato Crimson (`#E23744`)
+* **Satisfaction & Value**: Emerald Green (`#10B981`)
+* **Ratings & Benchmarks**: Amber Gold (`#F59E0B`)
+* **Service Badges**: Royal Blue (`#3B82F6`) & Royal Purple (`#8B5CF6`)
+* **Typography**: Modern geometric sans-serif (*Plus Jakarta Sans* & *Outfit*)
 
-### 2. Restaurant Ratings vs. Votes
+---
 
-Uses a scatter plot to explore the relationship between restaurant ratings and the number of votes received.
-
-## Data Processing
-
-The project performs the following preprocessing steps:
-
-1. Loads the CSV dataset into a Pandas DataFrame.
-2. Removes leading and trailing whitespace from column names.
-3. Displays the dataset columns and sample records.
-4. Converts restaurant ratings such as `4.1/5` into numeric values such as `4.1`.
-
-## Learning Outcomes
-
-This project demonstrates practical knowledge of:
-
-* CSV file handling
-* Pandas DataFrame operations
-* Basic data cleaning
-* Numeric data conversion
-* Exploratory data analysis (EDA)
-* Count plots and scatter plots
-* Saving visualizations as image files
-
-## Future Improvements
-
-* Add missing-value handling and dataset validation.
-* Analyze ratings by online ordering and table booking availability.
-* Explore restaurant pricing and rating patterns.
-* Generate additional statistical summaries.
-* Build an interactive dashboard using Streamlit.
-
-## Author
+## 👤 Author
 
 **Aditya Upadhayay**
-=
-
-## License
-
-This project is intended for educational and portfolio purposes. Ensure that the dataset is used in accordance with its original license and terms.
