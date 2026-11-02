@@ -1,17 +1,3 @@
-"""
-Zomato Restaurant Data Analysis & Dashboard Entrypoint
-Author: Aditya Upadhayay
-
-This script performs exploratory data analysis (EDA) on the Zomato restaurant dataset
-and provides both static visualizations and an interactive Streamlit dashboard.
-
-Usage:
-    - To run EDA & generate static charts:
-        python Zomato.py
-    - To launch the interactive Streamlit dashboard:
-        streamlit run app.py  (or: streamlit run Zomato.py)
-"""
-
 import sys
 import os
 import numpy as np 
